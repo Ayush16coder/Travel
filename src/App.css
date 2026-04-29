@@ -1259,3 +1259,126 @@
   from { opacity: 0; transform: translateY(40px) scale(0.98); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
+/* ========================================
+   IMPROVED AUTH MODAL UI
+   ======================================== */
+.auth-input-group.email-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.auth-input-wrapper.top-rounded {
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.auth-input-wrapper.bottom-rounded {
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.auth-input-wrapper.single-rounded {
+  border-radius: var(--radius-lg);
+}
+.auth-switch-mode {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.auth-switch-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.auth-error {
+  color: #e31c5f;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.auth-success {
+  color: #008a05;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* ========================================
+   AUTH UI ALIGNMENT FIXES
+   ======================================== */
+.auth-header {
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px;
+  border-bottom: 1px solid var(--border-light);
+}
+.auth-title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-right: 0;
+}
+.auth-input-group {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.auth-input-wrapper {
+  position: relative;
+  background: var(--bg);
+  cursor: text;
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+}
+.auth-input-wrapper:last-child {
+  border-bottom: none;
+}
+.auth-input-wrapper:focus-within {
+  border: 2px solid var(--text);
+  margin: -1px;
+  border-radius: var(--radius-lg);
+  z-index: 2;
+}
+.auth-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 24px 16px 8px;
+  font-size: 1rem;
+  color: var(--text);
+}
+.auth-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: all 0.15s ease;
+  transform-origin: left top;
+}
+.auth-input:not(:placeholder-shown) ~ .auth-label,
+.auth-input:focus ~ .auth-label {
+  transform: translateY(-10px) scale(0.75);
+}
+.auth-social-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-social-icon {
+  position: absolute;
+  left: 20px;
+}
